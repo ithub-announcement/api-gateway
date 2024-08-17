@@ -10,4 +10,9 @@ spring:
           - id: feed-service
             uri: http://localhost:8080
             predicates:
-              - Path=/**
+              Path=/feed/api/v1/**
+springdoc:
+  swagger-ui:
+    urls:
+      - name: "feed-service"
+        url: http://localhost:8080/feed/api/v1/api-docs
